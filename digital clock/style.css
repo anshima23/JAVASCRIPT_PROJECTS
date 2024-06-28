@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+.hero{
+    background: linear-gradient(45deg,#08001f,#30197d);
+    color: white;
+    width: 100%;
+    min-height:100vh;/*ye nhi lagaye ge to color nhi aye ga*/
+    position: relative;
+}
+
+.container{
+    width: 800px;
+    height: 180px;
+    position: absolute;/*isko hatane se box upper left me pahuch jaye ga,box ko center me rakhne ke liye use ho rha hai ye*/
+    top: 50%;/*box ke uper se space milega thoda*/
+    left: 50%;/*box ke left se space milega thoda*/
+    transform: translate(-59%,-50%);
+   
+}
+
+.clock{
+    width: 100%;/*agr width height dono hata dege to box bhut patla ho jaye ga*/
+    height: 100%;
+    background: rgba(235,0, 255, 0.11);
+    border-radius: 10px;
+    display: flex;/*display flex ke sath align item aur justify content work krta hai*/
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(40px);
+}
+
+.container::before{
+    content: '';
+    width: 180px;
+    height: 180px;
+    background: #f41b75;
+    border-radius: 5px;
+    position: absolute;
+    left: -50px;
+    top: -50px;
+    z-index: -1;/*z-index lagane se uper wala color thoda transparent ho jata hai*/
+}
+
+
+.container::after{
+    content: '';
+    width: 180px;
+    height: 180px;
+    background: #419aff;
+    border-radius: 50%;
+    position: absolute;
+    right: -30px;/*agr ham ye - hata dege to circle rectangle ke edge se thoda side se aye ga*/
+    bottom: -50px;
+    z-index: -1;/*z-index lagane se uper wala color thoda transparent ho jata hai*/
+}
+
+.clock span{
+    font-size: 80px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+
+.clock span::after{
+    font-size: 16px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+#hrs::after{
+   content: 'HOURS';
+}
+
+
+#min::after{
+    content: 'MIN';
+ }
+
+ 
+#sec::after{
+    content: 'SEC';
+ }

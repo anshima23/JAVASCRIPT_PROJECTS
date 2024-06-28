@@ -1,0 +1,31 @@
+.stopwatch{
+    background-color: green;
+    color: white;
+    text-align: center;
+    width: 450px;/*container ki width*/
+    margin: auto;/*to horizontally center the element in container*/
+    height: 100px;
+   align-items: center;
+  
+}
+
+
+#start{
+  font-size: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+#pause{
+    font-size: 25px;
+    border-radius: 5px;
+  cursor: pointer;
+}
+
+
+#reset{
+    font-size: 25px;
+    border-radius: 5px;
+  cursor: pointer;
+}
